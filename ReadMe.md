@@ -2,7 +2,7 @@
     CONSOLE APPLICATION : Genetic Algorithm Project Overview
 ========================================================================
 
-AppWizard has created this Genetic Algorithm application for you.
+AppWizard has #created this Genetic Algorithm application for you.
 
 This file contains a summary of what you will find in each of the files that
 make up your Genetic Algorithm application.
