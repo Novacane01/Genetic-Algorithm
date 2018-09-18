@@ -1,40 +1,12 @@
-========================================================================
-    CONSOLE APPLICATION : Genetic Algorithm Project Overview
-========================================================================
 
-AppWizard has #created this Genetic Algorithm application for you.
+# Genetic Algorithm Project Overview
 
-This file contains a summary of what you will find in each of the files that
-make up your Genetic Algorithm application.
+This project was made using the graphics library SFML in order to improve my understanding of machine learning and how genetic algorithms work.
 
+# How it works
 
-Genetic Algorithm.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+In the beginning a population of size n is created and filled with DNA objects that hold specific data. All of the DNA objects have a simple task which is to find their way to the circle at the top of the screen. The simulation will run until either all of the population has died or a certain amount of time has elasped. After each simulation the learning starts to occur. Depending on how well each DNA object performed, they were assigned a fitness value. The DNA which got closest to the goal were assigned hte highest fitness while the others received a lower score. These scores were used to decide which DNA would be selected for breeding and cross-over. Using elitist selection, the DNA with the highest fitness score is automatically chosen as a parent which increases the rate of success per generation. As the simulation continues to run, the smarter the population becomes, and the closer each DNA objects comes to their goal. To prevent the algorithm from getting stuck in a generation we include a mutation rate which occasioinally randomizes the characteristics of a speciic DNA object.
 
-Genetic Algorithm.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+# Resources
 
-Genetic Algorithm.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Genetic Algorithm.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+SFML - https://www.sfml-dev.org/
