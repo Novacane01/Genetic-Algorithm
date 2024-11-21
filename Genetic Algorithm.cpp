@@ -1,12 +1,11 @@
 // Genetic Algorithm.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include "Population.h"
 #include <iostream>
-#include <Windows.h>
 #include <vector>
+#include <unistd.h>
 
 using namespace std;
 
@@ -16,11 +15,11 @@ float WINDOW_LENGTH = 720.f;
 float WINDOW_WIDTH = 1080.f;
 
 float calcDist(float, float, float, float);
-int main()
-{
+
+int main() {
+
 	srand(time(0));
 	Population population;
-	vector<DNA> genepool;
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_LENGTH),"Pathfinder");
 	sf::Clock clock;
 	sf::RectangleShape target(sf::Vector2f(25, 25));
@@ -32,7 +31,7 @@ int main()
 	target.setFillColor(sf::Color(255, 0, 0, 100));
 	sf::Text details;
 	sf::Font font;
-	if (!font.loadFromFile("C:\\Fonts\\LemonMilk.otf")) {
+	if (!font.loadFromFile("/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf")) {
 		cout << "Could not load font" << endl;
 	}
 	details.setFont(font);
@@ -69,9 +68,6 @@ int main()
 			DNA popcopy[populationSize] ;
 			for (int i = 0; i < populationSize;i++) {
 				population.population[i].calcFitness(target.getPosition(),blocker.getPosition());
-				/*for (int j = 0;j < population.population[i].fitness*populationSize;j++) {
-					genepool.push_back(population.population[i]);
-				}*/
 			}
 			population.calcFitness();
 			for (int i = 0;i < populationSize;i++) {
@@ -90,12 +86,12 @@ int main()
 				population.population[i] = child;
 			}
 			population.generation++;
-			genepool.clear();
 			count = 0;
 		}
-		Sleep(10);
+		usleep(10000);
 	}
     return 0;
+
 }
 
 float calcDist(float x1, float y1, float x2, float y2) {

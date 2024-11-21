@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Population.h"
 
 Population::Population() {

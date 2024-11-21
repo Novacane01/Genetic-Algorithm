@@ -1,5 +1,7 @@
-#pragma once
-#include "SFML\Graphics.hpp"
+#ifndef DNA_H
+#define DNA_H
+
+#include <SFML/Graphics.hpp>
 #include <vector>
 
 class DNA {
@@ -17,6 +19,7 @@ public:
 	bool dead = false;
 	bool finished = false;
 	int lifespan = 50;
-private:
 	
 };
+
+#endif

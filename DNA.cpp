@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "DNA.h"
 #include <iostream>
 #include "Population.h"

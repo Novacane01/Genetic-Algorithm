@@ -1,6 +1,10 @@
-#pragma once
-#include "SFML\Graphics.hpp"
+#ifndef POPULATION_H
+#define POPULATION_H
+
+#include <SFML/Graphics.hpp>
 #include "DNA.h"
+#include <math.h>
+
 
 const extern int populationSize;
 extern float mutationRate;
@@ -16,6 +20,7 @@ public:
 	float avgFitness = 0.f;
 	float highestFitness = 0.f;
 	DNA selection(DNA *);
-private:
 
 };
+
+#endif
